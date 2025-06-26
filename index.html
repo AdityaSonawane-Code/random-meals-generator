@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Meal Generator</title>
+</head>
+
+<body class="container is-desktop">
+    <header class='start-position'>
+        <!-- displays favorite items -->
+        <nav>
+            <ul class="saved-list">
+
+            </ul>
+        </nav>
+        <h1>Random Meals Generator</h1>
+        <h2>Press the "SHOW" button and instantly get a random dish to cook and cocktail to mix! If you like it, you can
+            save it.</h2>
+        <div class='button-container buttons are-medium'>
+            <button class="button rmg-button is-warning is-light">SHOW!</button>
+            <button class="button save-button is-danger is-light hidden">Favorite</button>
+            <button class="button clear-button is-info is-light hidden">Clear Fav</button>
+        </div>
+    </header>
+
+    <main class="container hidden">
+        <div class="columns">
+            <section class="column recipe-card meal-container card">
+                <h3 class="meal-name"></h3>
+                <div class="hero-foot">
+                    <nav class="tabs is-boxed is-fullwidth is-medium">
+                        <div class="container">
+                            <ul id="meal-ul">
+                                <li class="meal-tab is-active" onclick="openTab(event,'meal-img')">
+                                    <a>Image</a>
+                                </li>
+                                <li class="meal-tab" onclick="openTab(event,'meal-ingredients')">
+                                    <a>Ingredients</a>
+                                </li>
+                                <li class="meal-tab" onclick="openTab(event,'meal-instructions')">
+                                    <a>Instructions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="">
+                    <a id="meal-img" class="meal-link meal-content-tab" href="" target="_blank">
+                        <img class="meal-img" src="" alt="" />
+                    </a>
+                    <ul id="meal-ingredients" class="meal-ingredients meal-content-tab content-text hidden">
+
+                    </ul>
+                    <p id="meal-instructions" class="meal-instructions meal-content-tab content-text hidden"></p>
+                </div>
+            </section>
+
+            <section class="column recipe-card drink-container card">
+                <h3 class="drink-name"></h3>
+                <div class="hero-foot">
+                    <nav class="tabs is-boxed is-fullwidth is-medium">
+                        <div class="container">
+                            <ul id="drink-ul">
+                                <li class="drink-tab is-active" onclick="openTab(event,'drink-img')">
+                                    <a>Image</a>
+                                </li>
+                                <li class="drink-tab" onclick="openTab(event,'drink-ingredients')">
+                                    <a>Ingredients</a>
+                                </li>
+                                <li class="drink-tab" onclick="openTab(event,'drink-instructions')">
+                                    <a>Instructions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="">
+                    <a id="drink-img" class="drink-link drink-content-tab" href="">
+                        <img class="drink-img" src="" alt="" />
+                    </a>
+                    <ul id="drink-ingredients" class="drink-ingredients drink-content-tab content-text hidden">
+
+                    </ul>
+                    <p id="drink-instructions" class="drink-instructions drink-content-tab content-text hidden"></p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
