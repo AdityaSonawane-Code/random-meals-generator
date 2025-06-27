@@ -15,7 +15,6 @@ html {
                 url('pexels-alleksana-4113891.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;           /* ✅ Full screen */
     background-attachment: fixed;
     -ms-overflow-style: none;
     scrollbar-width: none;
